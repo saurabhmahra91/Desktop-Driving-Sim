@@ -1,0 +1,9 @@
+<configuration>
+    <input>
+        <net-file value="lympics.net.xml"/>
+        <route-files value="lympics.rou.xml"/>
+    </input>
+    <processing>
+        <lateral-resolution value=".1"/>
+    </processing>
+</configuration>

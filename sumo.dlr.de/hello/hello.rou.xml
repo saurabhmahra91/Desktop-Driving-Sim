@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-12-17 04:03:02 by Eclipse SUMO netedit Version 1.9.2
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <output>
+        <output-file value="C:\Users\saurabh\DDS%20Project\sumo.dlr.de\hello\hello.net.xml"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <netedit>
+        <route-files value="C:\Users\saurabh\DDS%20Project\sumo.dlr.de\hello\hello.rou.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <route edges="-gneE12" color="yellow" id="route_0"/>
+    <route edges="gneE12" color="yellow" id="route_1"/>
+    <route edges="-gneE13" color="yellow" id="route_2"/>
+    <route edges="gneE13" color="yellow" id="route_3"/>
+    <route edges="-gneE14" color="yellow" id="route_4"/>
+    <route edges="gneE14" color="yellow" id="route_5"/>
+    <vehicle id="vehicle_0" depart="0.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_1" depart="0.00" color="red" route="route_3"/>
+    <vehicle id="vehicle_2" depart="0.00" color="red" route="route_4"/>
+</routes>

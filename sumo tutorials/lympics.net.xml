@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-12-17 02:33:56 by Eclipse SUMO netedit Version 1.9.2
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <output>
+        <output-file value="C:\Users\saurabh\DDS%20Project\sumo%20tutorials\lympics.net.xml"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-43.67,-19.08,151.31,122.42" origBoundary="10000000000.00,10000000000.00,-10000000000.00,-10000000000.00" projParameter="!"/>
+
+    <edge id=":3_0" function="internal">
+        <lane id=":3_0_0" index="0" allow="bus" speed="13.89" length="3.00" shape="26.75,35.66 29.75,35.66"/>
+        <lane id=":3_0_1" index="1" speed="13.89" length="3.00" shape="26.75,38.86 29.75,38.86"/>
+        <lane id=":3_0_2" index="2" allow="rail_urban" speed="13.89" length="3.00" shape="26.75,42.06 29.75,42.06"/>
+    </edge>
+
+    <edge id="beg" from="1" to="3" priority="-1">
+        <lane id="beg_0" index="0" allow="bicycle" speed="13.89" length="70.42" shape="-43.67,32.46 26.75,32.46"/>
+        <lane id="beg_1" index="1" allow="bus" speed="13.89" length="70.42" shape="-43.67,35.66 26.75,35.66"/>
+        <lane id="beg_2" index="2" speed="13.89" length="70.42" shape="-43.67,38.86 26.75,38.86"/>
+        <lane id="beg_3" index="3" allow="rail_urban" speed="13.89" length="70.42" shape="-43.67,42.06 26.75,42.06"/>
+    </edge>
+    <edge id="end" from="3" to="2" priority="-1">
+        <lane id="end_0" index="0" allow="bicycle" speed="13.89" length="121.56" shape="29.75,32.46 151.31,32.46"/>
+        <lane id="end_1" index="1" allow="bus" speed="13.89" length="121.56" shape="29.75,35.66 151.31,35.66"/>
+        <lane id="end_2" index="2" speed="13.89" length="121.56" shape="29.75,38.86 151.31,38.86"/>
+        <lane id="end_3" index="3" allow="rail_urban" speed="13.89" length="121.56" shape="29.75,42.06 151.31,42.06"/>
+    </edge>
+    <edge id="gneE1" from="gneJ2" to="gneJ3" priority="-1">
+        <lane id="gneE1_0" index="0" speed="13.89" length="141.50" shape="46.62,122.42 46.62,-19.08"/>
+    </edge>
+
+    <tlLogic id="3" type="static" programID="0" offset="0">
+        <phase duration="1100" state="rrr"/>
+    </tlLogic>
+
+    <junction id="1" type="dead_end" x="-43.67" y="43.66" incLanes="" intLanes="" shape="-43.67,43.66 -43.67,30.86"/>
+    <junction id="2" type="dead_end" x="151.31" y="43.66" incLanes="end_0 end_1 end_2 end_3" intLanes="" shape="151.31,30.86 151.31,43.66"/>
+    <junction id="3" type="traffic_light" x="29.75" y="43.66" incLanes="beg_0 beg_1 beg_2 beg_3" intLanes=":3_0_0 :3_0_1 :3_0_2" shape="29.75,43.66 29.75,30.86 26.75,30.86 26.75,43.66">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="gneJ2" type="dead_end" x="48.22" y="122.42" incLanes="" intLanes="" shape="48.22,122.42 45.02,122.42"/>
+    <junction id="gneJ3" type="dead_end" x="48.22" y="-19.08" incLanes="gneE1_0" intLanes="" shape="45.02,-19.08 48.22,-19.08"/>
+
+    <connection from="beg" to="end" fromLane="1" toLane="1" via=":3_0_0" tl="3" linkIndex="0" dir="s" state="O"/>
+    <connection from="beg" to="end" fromLane="2" toLane="2" via=":3_0_1" tl="3" linkIndex="1" dir="s" state="O"/>
+    <connection from="beg" to="end" fromLane="3" toLane="3" via=":3_0_2" tl="3" linkIndex="2" dir="s" state="O"/>
+
+    <connection from=":3_0" to="end" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":3_0" to="end" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":3_0" to="end" fromLane="2" toLane="3" dir="s" state="M"/>
+
+</net>
